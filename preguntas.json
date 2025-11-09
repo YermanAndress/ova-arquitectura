@@ -1,0 +1,79 @@
+[{
+		"id":	"p1",
+		"texto":	"¿Capital de Francia?",
+		"opciones":	[{
+				"texto":	"París",
+				"esCorrecta":	true
+			}, {
+				"texto":	"Roma",
+				"esCorrecta":	false
+			}, {
+				"texto":	"Madrid",
+				"esCorrecta":	false
+			}]
+	}, {
+		"id":	"p2",
+		"texto":	"¿Capital de Italia?",
+		"opciones":	[{
+				"texto":	"Roma",
+				"esCorrecta":	true
+			}, {
+				"texto":	"París",
+				"esCorrecta":	false
+			}, {
+				"texto":	"Madrid",
+				"esCorrecta":	false
+			}]
+	}, {
+		"id":	"p2",
+		"texto":	"¿Capital de España?",
+		"opciones":	[{
+				"texto":	"París",
+				"esCorrecta":	true
+			}, {
+				"texto":	"Roma",
+				"esCorrecta":	false
+			}, {
+				"texto":	"Madrid",
+				"esCorrecta":	false
+			}]
+	}, {
+		"id":	"p2",
+		"texto":	"¿Capital de España?",
+		"opciones":	[{
+				"texto":	"París",
+				"esCorrecta":	true
+			}, {
+				"texto":	"Roma",
+				"esCorrecta":	false
+			}, {
+				"texto":	"Madrid",
+				"esCorrecta":	false
+			}]
+	}, {
+		"id":	"4",
+		"texto":	"¿Capital de Colombia?",
+		"opciones":	[{
+				"texto":	"París",
+				"esCorrecta":	true
+			}, {
+				"texto":	"Roma",
+				"esCorrecta":	false
+			}, {
+				"texto":	"Madrid",
+				"esCorrecta":	false
+			}]
+	}, {
+		"id":	"5",
+		"texto":	"¿Capital de Colombiaaa?",
+		"opciones":	[{
+				"texto":	"Bogota",
+				"esCorrecta":	true
+			}, {
+				"texto":	"París",
+				"esCorrecta":	false
+			}, {
+				"texto":	"Madrid",
+				"esCorrecta":	false
+			}]
+	}]

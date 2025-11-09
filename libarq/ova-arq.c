@@ -1,9 +1,9 @@
-#include "ova-web.h"
+#include "ova-arq.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <cjson/cJSON.h>
+#include <cJSON.h>
 
 #define FILE_PATH "preguntas.json"
 
@@ -130,20 +130,20 @@ static char* jstringToCString(JNIEnv* env, jstring jStr) {
     return str;
 }
 
-JNIEXPORT jstring JNICALL Java_ejemplojni_lib_OvaWebJNI_obtenerPreguntaAleatoria(JNIEnv *env, jobject obj) {
+JNIEXPORT jstring JNICALL Java_ovaarq_OvaArqJNI_obtenerPreguntaAleatoria(JNIEnv *env, jobject obj) {
     char* resultado = obtener_pregunta_aleatoria();
     jstring jResultado = (*env)->NewStringUTF(env, resultado);
     liberar_memoria(resultado);
     return jResultado;
 }
 
-JNIEXPORT void JNICALL Java_ejemplojni_lib_OvaWebJNI_guardarPregunta(JNIEnv *env, jobject obj, jstring jJsonStr) {
+JNIEXPORT void JNICALL Java_ovaarq_OvaArqJNI_guardarPregunta(JNIEnv *env, jobject obj, jstring jJsonStr) {
     char* jsonStr = jstringToCString(env, jJsonStr);
     guardar_pregunta(jsonStr);
     free(jsonStr);
 }
 
-JNIEXPORT jstring JNICALL Java_ejemplojni_lib_OvaWebJNI_validarRespuestaPorIndice(JNIEnv *env, jobject obj, jstring jId, jint indice) {
+JNIEXPORT jstring JNICALL Java_ovaarq_OvaArqJNI_validarRespuestaPorIndice(JNIEnv *env, jobject obj, jstring jId, jint indice) {
     char* id = jstringToCString(env, jId);
     char* resultado = validar_respuesta_por_indice(id, indice);
     jstring jResultado = (*env)->NewStringUTF(env, resultado);
@@ -152,6 +152,6 @@ JNIEXPORT jstring JNICALL Java_ejemplojni_lib_OvaWebJNI_validarRespuestaPorIndic
     return jResultado;
 }
 
-JNIEXPORT void JNICALL Java_ejemplojni_lib_OvaWebJNI_liberarMemoria(JNIEnv *env, jobject obj, jlong ptr) {
+JNIEXPORT void JNICALL Java_ovaarq_OvaArqJNI_liberarMemoria(JNIEnv *env, jobject obj, jlong ptr) {
     free((void*)ptr);
 }

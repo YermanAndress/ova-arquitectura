@@ -1,5 +1,5 @@
-#ifndef OVA_WEB_H
-#define OVA_WEB_H
+#ifndef OVA_ARQ_H
+#define OVA_ARQ_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -14,10 +14,10 @@ void liberar_memoria(char* ptr);
 
 // Funciones JNI (para que se declaren visibles desde Java)
 #include <jni.h>
-JNIEXPORT jstring JNICALL Java_ejemplojni_lib_OvaWebJNI_obtenerPreguntaAleatoria(JNIEnv *, jobject);
-JNIEXPORT void JNICALL Java_ejemplojni_lib_OvaWebJNI_guardarPregunta(JNIEnv *, jobject, jstring);
-JNIEXPORT jstring JNICALL Java_ejemplojni_lib_OvaWebJNI_validarRespuestaPorIndice(JNIEnv *, jobject, jstring, jint);
-JNIEXPORT void JNICALL Java_ejemplojni_lib_OvaWebJNI_liberarMemoria(JNIEnv *, jobject, jlong);
+JNIEXPORT jstring JNICALL Java_ovaarq_OvaArqJNI_obtenerPreguntaAleatoria(JNIEnv *, jobject);
+JNIEXPORT void JNICALL Java_ovaarq_OvaArqJNI_guardarPregunta(JNIEnv *, jobject, jstring);
+JNIEXPORT jstring JNICALL Java_ovaarq_OvaArqJNI_validarRespuestaPorIndice(JNIEnv *, jobject, jstring, jint);
+JNIEXPORT void JNICALL Java_ovaarq_OvaArqJNI_liberarMemoria(JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus
 }

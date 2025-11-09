@@ -41,4 +41,9 @@ public class OvaArqService {
         ovaarq.OvaArqJNI ova = new ovaarq.OvaArqJNI();
         return ova.validarRespuestaPorIndice(id, indice);
     }
+
+    public void liberarMemoria(long ptr) {
+        ovaarq.OvaArqJNI ova = new ovaarq.OvaArqJNI();
+        ova.liberarMemoria(ptr);
+    }
 }
