@@ -1,5 +1,5 @@
 services:
-  lagrange-app:
+  ovaarq-app:
     build: .
     image: 'germanandress/ovaarq-app:latest'
     ports:

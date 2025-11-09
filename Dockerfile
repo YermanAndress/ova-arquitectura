@@ -1,4 +1,4 @@
-FROM openjdk:21
+FROM eclipse-temurin:21-jdk
 VOLUME /tmp
 EXPOSE 8080
 
